@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(169, 235, 169);
+}
+header{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#logo{
+    width: 15%;
+    border-radius: 20% 50%;
+    box-shadow: #fad193 5px 5px;
+    float: left;
+}
+#mainheading{
+    font-size: 9vw;
+    margin: auto;
+    text-align: center;
+    width: 75%;
+}
+nav{
+    text-align: center;
+    font-size: 2vw;
+    background-color: rgb(97, 195, 228);
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+
+}
+nav>a{
+    margin: 5px;
+}
+.maindiv>.leftdiv{
+    background-color: blue;
+    float: left;
+    width: fit-content;
+    height: fit-content;
+}
+.maindiv>.rightdiv{
+    background-color: bisque;
+    float: right;
+    width: fit-content;
+    height: fit-content;
+}
