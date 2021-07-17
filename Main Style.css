@@ -11,6 +11,10 @@ header{
     box-shadow: #fad193 5px 5px;
     float: left;
 }
+#gif{
+    float: center;
+    box-shadow: darkslategrey 15px 20px;
+}
 #mainheading{
     font-size: 9vw;
     margin: auto;
@@ -29,15 +33,16 @@ nav{
 nav>a{
     margin: 5px;
 }
-.maindiv>.leftdiv{
-    background-color: blue;
-    float: left;
-    width: fit-content;
-    height: fit-content;
+ol{
+    font-size: 20px;
 }
-.maindiv>.rightdiv{
-    background-color: bisque;
-    float: right;
-    width: fit-content;
-    height: fit-content;
+p{
+    font-size: 20px;
+    text-align: center;
+}
+img{
+    float: center;
+}
+h1{
+    text-align: center;
 }
