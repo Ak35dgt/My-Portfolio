@@ -4,6 +4,7 @@ body{
 header{
     width: 100%;
     margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #logo{
     width: 15%;
@@ -20,6 +21,12 @@ header{
     margin: auto;
     text-align: center;
     width: 75%;
+}
+#SG{
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+    float: right;
 }
 nav{
     text-align: center;
@@ -45,4 +52,9 @@ img{
 }
 h1{
     text-align: center;
+}
+#collage{
+    height: 100%;
+    width: 99.99%;
+    float: center;
 }
