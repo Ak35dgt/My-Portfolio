@@ -41,6 +41,7 @@ header{
     width: 75%;
 }
 #SG{
+    border: darkorchid 3px dashed;
     border-radius: 50%;
     width: 20%;
     height: 20%;
@@ -48,8 +49,9 @@ header{
 }
 #collage{
     height: 100%;
-    width: 99.99%;
+    width: 99%;
     float: center;
+    border: darkmagenta 10px ridge;
 }
 #sgmeet{
     border: mediumvioletred double 0.6vw;
