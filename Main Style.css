@@ -1,5 +1,23 @@
 body{
-    background-color: rgb(169, 235, 169);
+    background-color: cadetblue;
+    animation: bgchange 10s linear infinite;
+}
+@keyframes bgchange{ 
+    0%{
+        background-color: cadetblue;
+    }
+    25%{
+        background-color: darkkhaki;
+    }
+    50%{
+        background-color: dodgerblue;
+    }
+    75%{
+        background-color: lightgoldenrodyellow;
+    }
+    100%{
+        background-color: cadetblue;
+    }
 }
 header{
     width: 100%;
@@ -28,6 +46,16 @@ header{
     height: 20%;
     float: right;
 }
+#collage{
+    height: 100%;
+    width: 99.99%;
+    float: center;
+}
+#sgmeet{
+    border: mediumvioletred double 0.6vw;
+    height: 60%;
+    width: 60%
+}
 nav{
     text-align: center;
     font-size: 2vw;
@@ -52,9 +80,4 @@ img{
 }
 h1{
     text-align: center;
-}
-#collage{
-    height: 100%;
-    width: 99.99%;
-    float: center;
 }
