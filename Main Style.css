@@ -1,6 +1,6 @@
 body{
     background-color: cadetblue;
-    animation: bgchange 10s linear infinite;
+    animation: bgchange 20s linear infinite;
 }
 @keyframes bgchange{ 
     0%{
@@ -41,15 +41,15 @@ header{
     width: 75%;
 }
 #SG{
-    border: darkorchid 3px dashed;
+    border: darkorchid 5px dashed;
     border-radius: 50%;
     width: 20%;
     height: 20%;
     float: right;
 }
 #collage{
-    height: 100%;
-    width: 99%;
+    height: 60%;
+    width: 59%;
     float: center;
     border: darkmagenta 10px ridge;
 }
@@ -62,13 +62,14 @@ nav{
     text-align: center;
     font-size: 2vw;
     background-color: rgb(97, 195, 228);
-    width: 40%;
+    width: 50%;
     margin: auto;
-    padding: 10px;
+    padding: 12px;
 
 }
 nav>a{
-    margin: 5px;
+    margin: 10px;
+    text-decoration: none;
 }
 ol{
     font-size: 20px;
@@ -82,4 +83,32 @@ img{
 }
 h1{
     text-align: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(184, 51, 11);
+}
+fieldset{
+    width: fit-content;
+    margin: auto;
+}
+#Form{
+    font-size: 25px;
+    text-align: center;
+    float: center;
+}
+#Rating{
+    font-size: 25px;
+}
+#Form>select{
+    font-size: 15px;
+}
+#Gender{
+    text-align: center;
+    float: center;
+}
+#submit{
+    width: 80px;
+    height: 25px;
+    font-size: 15px;
 }
