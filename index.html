@@ -16,7 +16,7 @@
             <a href="sunilmeet.html" style="color: black;">Sunil Gavaskar</a>
             <a href="mypl.html" style="color: black;">My Gallery</a>
         </nav>
-        <h1>Hello! This is Advik Sharma's Portfolio</h1>
+        <h1 id="hi">Hello! Welcome to my Portfolio -</h1>
             <hr>
             <p>Hi Guys! My name is Advik Sharma and here I will share everything that <I></I> will make in coding, legos and YouTube. First here some info about me.</p>
             <p>I am 12 years old. I go to Evergreen Middle School in Redmond, Washington. I am in 7th Grade. I love to play Cricket, Videogames, Badminton, Football, and Soccer. I like reading Harry Potter books. I have read all the books 3 times and currently reading 4th time. I have also watched all Harry Potter movies 3 times. 
@@ -47,5 +47,9 @@
         <img src="ME-COLLAGE.jpg" id="collage">
         <p style="font-size: 300%;text-align: center;float: right;margin: 100px;">This is ME in a collage!</p>
         <p style="background-color: burlywood; height: 40px;font-size: 25px;"><a href="Feedback_form.html">Click here for the Feedback Form</a></p>
+        <script>
+            document.getElementById("hi").innerHTML+=name;
+            var name=prompt("What is your name -");
+        </script>
     </body>
 </html>
