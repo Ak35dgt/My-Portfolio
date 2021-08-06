@@ -1,73 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Feedback Form</title>
-    <title>My life</title>
-    <link rel="stylesheet" href="Main Style.css">
-    <link rel="icon" href="1738177.jpg">
+    <head>
+        <title>Feedback Form</title>
+        <title>My life</title>
+        <link rel="stylesheet" href="Main Style.css">
+        <link rel="icon" href="1738177.jpg">
+        </head>
     </head>
-</head>
-<body>
-    <div id="banner"></div>
-    <header>
-        <img src="Me.PNG" id="logo">
-        <h1 id="mainheading">Advik's Portfolio</h1>
-    </header>
-    <nav>
-        <a href="index.html" style="color: black;">Home</a>
-        <a href="sunilmeet.html" style="color: black;">Sunil Gavaskar</a>
-        <a href="mypl.html" style="color: black;">My Gallery</a>
-    </nav>
-    <h1>Feedback Form</h1>
-    <form name="Form" id="Form" action="mailto: advikamitsharma@gmail.com" method="POST" enctype="text/plain">
-        <hr>
-        <br>
-        <label for="F-name">First Name:</label>
-        <input type="text" id="F-name" name="F-name">
-        <br>
-        <br>
-        <label for="L-name">Last Name:</label>
-        <input type="text" id="L-name" name="L-name">
-        <br>
-        <br>
-        <label for="email">Email ID:</label>
-        <input type="email" id="email" name="email">
-        <br>
-        <br>
-        <fieldset id="Gender">
-            <legend>Gender</legend>
-            <label for="Male">Male:</label>
-            <input type="radio" id="Male" name="Gender">
-            <label for="Female">Female:</label>
-            <input type="radio" id="Female" name="Gender">
-        </fieldset>
-        <br>
-        <fieldset id="Source">
-            <legend>From where did you find this Website</legend>
-            <label for="Internet">Internet:</label>
-            <input type="checkbox" id="Internet" name="Internet">
-            <label for="Friends">Friends or Family:</label>
-            <input type="checkbox" id="Friends" name="Friends">
-            <label for="Other">Other</label>
-            <input type="checkbox" id="Other" name="Other">
-        </fieldset>
-        <br>
-        <label for="Rating" id="Rating">On a scale of 1-5 Star, How did I do on this Website?</label>
-        <select id="Rating" name="Rating">
-            <option name="select" value="1">Select a option</option>
-            <option name="1 Star" value="2">Poor</option>
-            <option name="2 Star" value="3">Bad</option>
-            <option name="3 Star" value="4">Ok</option>
-            <option name="4 Star" value="5">Good</option>
-            <option name="5 Star" value="6">Great</option>
-        </select>
-        <br>
-        <br>
-        <label for="Comment">Comments:</label>
-        <br>
-        <textarea id="Comment" cols="30" rows="10" name="Comments">Write your comments here</textarea>
-        <br>
-        <input type="submit" name="submit" id="submit" value="Finish" onclick="alert('Bye!')">
-    </form>
-</body>
+    <body>
+        <div id="banner"></div>
+        <header>
+            <img src="Me.PNG" id="logo">
+            <h1 id="mainheading">Advik's Portfolio</h1>
+        </header>
+        <nav>
+            <a href="index.html" style="color: black;">Home</a>
+            <a href="sunilmeet.html" style="color: black;">Sunil Gavaskar</a>
+            <a href="mypl.html" style="color: black;">My Gallery</a>
+        </nav>
+        <h1>Feedback Form</h1>
+        <form name="Form" id="Form" action="mailto: advikamitsharma@gmail.com" method="POST" enctype="text/plain" type=null>
+            <hr>
+            <br>
+            <label for="F-name">First Name:</label>
+            <input type="text" id="F-name" name="F-name">
+            <br>
+            <br>
+            <label for="L-name">Last Name:</label>
+            <input type="text" id="L-name" name="L-name">
+            <br>
+            <br>
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <br>
+            <fieldset id="Gender">
+                <legend>Gender</legend>
+                <label for="Male">Male:</label>
+                <input type="radio" id="Male" name="Gender">
+                <label for="Female">Female:</label>
+                <input type="radio" id="Female" name="Gender">
+            </fieldset>
+            <br>
+            <fieldset id="Source">
+                <legend>From where did you find this Website</legend>
+                <label for="Internet">Internet:</label>
+                <input type="checkbox" id="Internet" name="Internet">
+                <label for="Friends">Friends or Family:</label>
+                <input type="checkbox" id="Friends" name="Friends">
+                <label for="Other">Other</label>
+                <input type="checkbox" id="Other" name="Other">
+            </fieldset>
+            <br>
+            <label for="Rating" id="Rating">On a scale of 1-5 Star, How did I do on this Website?</label>
+            <select id="Rating" name="Rating">
+                <option name="select" value="0">Select a option</option>
+                <option name="1 Star" value="Poor">Poor</option>
+                <option name="2 Star" value="Bad">Bad</option>
+                <option name="3 Star" value="Ok">Ok</option>
+                <option name="4 Star" value="Good">Good</option>
+                <option name="5 Star" value="Great">Great</option>
+            </select>
+            <br>
+            <br>
+            <label for="Comment">Comments:</label>
+            <br>
+            <textarea id="Comment" cols="30" rows="10" name="Comments">Write your comments here</textarea>
+            <br>
+            <input type="submit" name="submit" id="submit" value="Finish" onclick="alert('Thank you for submitting the form. BYE!')">
+        </form>
+    </body>
 </html>
