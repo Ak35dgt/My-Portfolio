@@ -24,6 +24,43 @@ header{
     margin-bottom: 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+nav{
+    text-align: center;
+    font-size: 2vw;
+    background-color: rgb(97, 195, 228);
+    width: 50%;
+    margin: auto;
+    padding: 12px;
+
+}
+nav>a{
+    margin: 10px;
+    text-decoration: none;
+}
+ol{
+    font-size: 20px;
+}
+p{
+    font-size: 24px;
+    text-align: center;
+}
+img{
+    float: center;
+}
+h1{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(184, 51, 11);
+}
+fieldset{
+    width: fit-content;
+    margin: auto;
+}
+button{
+    background-color: darkolivegreen;
+}
 #logo{
     width: 15%;
     border-radius: 20% 50%;
@@ -59,40 +96,6 @@ header{
     height: 60%;
     width: 60%
 }
-nav{
-    text-align: center;
-    font-size: 2vw;
-    background-color: rgb(97, 195, 228);
-    width: 50%;
-    margin: auto;
-    padding: 12px;
-
-}
-nav>a{
-    margin: 10px;
-    text-decoration: none;
-}
-ol{
-    font-size: 20px;
-}
-p{
-    font-size: 24px;
-    text-align: center;
-}
-img{
-    float: center;
-}
-h1{
-    text-align: center;
-}
-a{
-    text-decoration: none;
-    color: rgb(184, 51, 11);
-}
-fieldset{
-    width: fit-content;
-    margin: auto;
-}
 #Form{
     font-size: 25px;
     text-align: center;
@@ -112,4 +115,19 @@ fieldset{
     width: 80px;
     height: 25px;
     font-size: 15px;
+}
+.aboutsg{
+    text-align: center;
+    float: right;
+}
+.aboutsg>p{
+    width: 500px;
+    margin: 60px;
+}
+.aboutsg>button{
+    width: 275px;
+    font-size: 130%;
+    padding: 5px;
+    margin-right: 165px;
+    margin-top: -40px;
 }
