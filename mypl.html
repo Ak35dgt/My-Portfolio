@@ -9,7 +9,7 @@
     <body>
         <div id="banner"></div>
         <header>
-            <img src="Me.PNG" id="logo">
+            <img onmouseover="imgchange()" onmouseout="imgsame()" src="Me.PNG" id="logo">
             <h1 id="mainheading">Advik's Portfolio</h1>
         </header>
         <nav>
@@ -96,5 +96,15 @@
         <br>
         <p style="float: center;font-size: 25px;"><a href="https://www.youtube.com/channel/UC0Rq48KgMwQWXmzDOSLO0WA">Click here</a> to go to my YouTube Channel</p>
         <p style="background-color: burlywood; height: 40px;font-size: 25px;"><a href="Feedback_form.html">Click here for the Feedback Form</a></p>
+        <script>
+            function imgchange(){
+                logo.style.width="20%";
+                logo.style.borderRadius="30% 60%";
+            }
+            function imgsame(){
+                logo.style.width="15%";
+                logo.style.borderRadius="20% 50%";
+            }
+        </script>
     </body>
 </html>

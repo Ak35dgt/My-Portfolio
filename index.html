@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+<html>
     <head>
         <title>Home</title>
         <link rel="stylesheet" href="Main Style.css">
         <link rel="icon" href="1738177.jpg">
     </head>
     <body>
-        
         <div id="banner"></div>
         <header>
-            <img src="Me.PNG" id="logo">
+            <img onmouseover="imgchange()" onmouseout="imgsame()" src="Me.PNG" id="logo">
             <h1 id="mainheading">Advik's Portfolio</h1>
         </header>
         <nav>
@@ -48,8 +48,17 @@
         <p style="font-size: 300%;text-align: center;float: right;margin: 100px;">This is ME in a collage!</p>
         <p style="background-color: burlywood; height: 40px;font-size: 25px;"><a href="Feedback_form.html">Click here for the Feedback Form</a></p>
         <script>
-            var name=prompt("What is your name -");
+            var name=prompt("What is your name");
             document.getElementById("hi").innerHTML+=name;
+            name+="!";
+            function imgchange(){
+                logo.style.width="20%";
+                logo.style.borderRadius="30% 60%";
+            }
+            function imgsame(){
+                logo.style.width="15%";
+                logo.style.borderRadius="20% 50%";
+            }
         </script>
     </body>
 </html>
