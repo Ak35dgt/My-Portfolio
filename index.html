@@ -5,22 +5,23 @@
         <link rel="stylesheet" href="Main Style.css">
         <link rel="icon" href="1738177.jpg">
     </head>
-    <body>
+    <body onload="openimg()">
         <div id="banner"></div>
         <header>
             <img onmouseover="imgchange()" onmouseout="imgsame()" src="Me.PNG" id="logo">
             <h1 id="mainheading">Advik's Portfolio</h1>
         </header>
         <nav>
-            <a href="index.html" style="color: black;">Home</a>
-            <a href="sunilmeet.html" style="color: black;">Sunil Gavaskar</a>
-            <a href="mypl.html" style="color: black;">My Gallery</a>
+            <a onmouseover="barchange()" onmouseout="barsame()" href="index.html" style="color: black; " id="home">Home</a>
+            <a onmouseover="gavachange()" onmouseout="gavasame()" href="sunilmeet.html" style="color: black;" id="gava">Sunil Gavaskar</a>
+            <a onmouseover="galchange()" onmouseout="galsame()" href="mypl.html" style="color: black;" id="gal">My Gallery</a>
+            <a onmouseover="prochange()" onmouseout="prosame()" href="My_pro.html" style="color: black;" id="pro">Mini Projects</a>
         </nav>
         <h1 id="hi">Hello! Welcome to my Portfolio -</h1>
             <hr>
             <p>Hi Guys! My name is Advik Sharma and here I will share everything that <I></I> will make in coding, legos and YouTube. First here some info about me.</p>
             <p>I am 12 years old. I go to Evergreen Middle School in Redmond, Washington. I am in 7th Grade. I love to play Cricket, Videogames, Badminton, Football, and Soccer. I like reading Harry Potter books. I have read all the books 3 times and currently reading 4th time. I have also watched all Harry Potter movies 3 times. 
-            <img src="AdvikWithSG.jpeg" id="SG">
+            <img id="SG">
             </p>
             <ol>
                 The Apps I like and use most:
@@ -56,8 +57,45 @@
                 logo.style.borderRadius="30% 60%";
             }
             function imgsame(){
+                logo.style.transition="1.5s"
                 logo.style.width="15%";
                 logo.style.borderRadius="20% 50%";
+            }
+            function barchange(){
+                home.style.fontSize="50px";
+                home.style.color="magenta";
+            }
+            function barsame(){
+                home.style.fontSize="40px";
+                home.style.color="black";
+            }
+            function gavachange(){
+                gava.style.fontSize="50px";
+                gava.style.color="magenta";
+            }
+            function gavasame(){
+                gava.style.fontSize="40px";
+                gava.style.color="black";
+            }
+            function galchange(){
+                gal.style.fontSize="50px";
+                gal.style.color="magenta";
+            }
+            function galsame(){
+                gal.style.fontSize="40px";
+                gal.style.color="black";
+            }
+            function openimg(){
+                console.log("Loading image");
+                document.getElementById("SG").src="AdvikWithSG.jpeg";
+            }
+            function prochange(){
+                pro.style.fontSize="50px";
+                pro.style.color="magenta";
+            }
+            function prosame(){
+                pro.style.fontSize="40px";
+                pro.style.color="black";
             }
         </script>
     </body>

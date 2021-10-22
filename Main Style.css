@@ -30,11 +30,11 @@ nav{
     background-color: rgb(97, 195, 228);
     width: 50%;
     margin: auto;
-    padding: 12px;
+    padding: 10px;
+    height: 55px;
 
 }
 nav>a{
-    margin: 10px;
     text-decoration: none;
 }
 ol{
@@ -60,6 +60,11 @@ fieldset{
 }
 button{
     background-color: darkolivegreen;
+}
+canvas{
+    background-color: rgba(210, 132, 30, 0.507);
+    margin: auto;
+    
 }
 #logo{
     width: 15%;
@@ -130,4 +135,38 @@ button{
     padding: 5px;
     margin-right: 165px;
     margin-top: -40px;
+    float: right;
+    text-align: center;
 }
+.projects{
+    text-align: center;
+    border:blueviolet double 5px;
+    width:fit-content ;
+    margin: 30px auto;
+}
+.slides{
+    width: 40%;
+    height: fit-content;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+}
+.slides>img{
+    position: absolute;
+    opacity: 0;
+    width: 50vw;
+    height: 50vh;
+    animation: startshow 20s infinite;              
+}
+@keyframes startshow{
+    25%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+}
+.slides img:nth-child(1){animation-delay: 0s;}
+.slides img:nth-child(2){animation-delay: 4s;}
+.slides img:nth-child(3){animation-delay: 12s;}
+.slides img:nth-child(4){animation-delay: 16s;}

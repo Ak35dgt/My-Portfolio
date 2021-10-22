@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Main Style.css">
+        <title>My Mini games</title>
+        <script>
+            var num=Math.random()*10;
+            var chosennum=Math.floor(num);
+            var names=["Advik","Amit","Aashvi","Parul"]
+            var chosenname=names[Math.floor(Math.random()*4)];
+            console.log(chosennum);
+            console.log(chosenname)
+        </script>
+    </head>
+    <body>
+        <div id="banner"></div>
+            <header>
+                <img onmouseover="imgchange()" onmouseout="imgsame()" src="Me.PNG" id="logo">
+                <h1 id="mainheading">Advik's Portfolio</h1>
+            </header>
+            <nav>
+                <a onmouseover="barchange()" onmouseout="barsame()" href="index.html" style="color: black; " id="home">Home</a>
+                <a onmouseover="gavachange()" onmouseout="gavasame()" href="sunilmeet.html" style="color: black;" id="gava">Sunil Gavaskar</a>
+                <a onmouseover="galchange()" onmouseout="galsame()" href="mypl.html" style="color: black;" id="gal">My Gallery</a>
+                <a onmouseover="prochange()" onmouseout="prosame()" href="My_pro.html" style="color: black;" id="pro">Mini Projects</a>
+            </nav>
+            <h1 id="hi">Hello! Welcome to My Mini projects -</h1>
+            <hr>
+            <button type="reset" onclick="reload()">Click to Refresh the games.</button>
+            <div class="projects" style="border: none;">
+                <h2>Greetings</h2>
+                <p id="greet"></p>
+            </div>
+            <div class="projects">
+                <h3>Number Guessing game</h3>
+                <p>Guess a number from 1-10</p>
+                <label for="num">Guess the number</label>
+                <input type="number" id="num" name="num">
+                <br>
+                <br>
+                <button type="button" onclick="check()">Check</button>
+                <p id="res"></p>
+            </div>
+            <div class="projects" style="text-align:center;">
+                <h3>Multiplication table</h3>
+                <p>Enter a number for a Multiplication table</p>
+                <label for="mul">Enter a number</label>
+                <input type="number" id="mul" name="mul">
+                <p id="table"></p>
+                <button type="button" onclick="mul()">Enter</button>
+            </div>
+            <div class="projects">
+                <h3>Prime Numbers</h3>
+                <p>Enter a number to see if it is a Prime number</p>
+                <label for="prime">Enter a number</label>
+                <input type="number" id="prime" name="prime">
+                <p id="primep"></p>
+                <button type="button" onclick="prime()">Enter</button>
+            </div>
+            <div class="projects">
+                <h3>Name guessing game</h3>
+                <p>Guess a name from Advik, Amit, Aashvi, Parul</p>
+                <label for="name">Enter a name</label>
+                <input type="text" id="name" name="name">
+                <p id="namep"></p>
+                <button type="button" onclick="names()">Enter</button>
+            </div>
+            <p style="background-color: burlywood; height: 40px;font-size: 25px;"><a href="Feedback_form.html">Click here for the Feedback Form</a></p>
+            <script>
+                function imgchange(){
+                    logo.style.width="20%";
+                    logo.style.borderRadius="30% 60%";
+                }
+                function imgsame(){
+                    logo.style.transition="1.5s"
+                    logo.style.width="15%";
+                    logo.style.borderRadius="20% 50%";
+                }
+                function barchange(){
+                    home.style.fontSize="50px";
+                    home.style.color="magenta";
+                }
+                function barsame(){
+                    home.style.fontSize="40px";
+                    home.style.color="black";
+                }
+                function gavachange(){
+                    gava.style.fontSize="50px";
+                    gava.style.color="magenta";
+                }
+                function gavasame(){
+                    gava.style.fontSize="40px";
+                    gava.style.color="black";
+                }
+                function galchange(){
+                    gal.style.fontSize="50px";
+                    gal.style.color="magenta";
+                }
+                function galsame(){
+                    gal.style.fontSize="40px";
+                    gal.style.color="black";
+                }
+                function prochange(){
+                    pro.style.fontSize="50px";
+                    pro.style.color="magenta";
+                }
+                function prosame(){
+                    pro.style.fontSize="40px";
+                    pro.style.color="black";
+                }
+                function getdateandtime(){
+                    var today=new Date();
+                    var currenthour=today.getHours();
+                    var message="";
+                    if (currenthour>=5 && currenthour<=11){
+                        message="Good Morning";
+                    }
+                    if (currenthour>=12 && currenthour<=16){
+                        message="Good Afternoon";
+                    }
+                    if (currenthour>=17 && currenthour<=19){
+                        message="Good Evening";
+                    }
+                    if (currenthour>=20 || currenthour<=4){
+                        message="Good Night";
+                    }
+                    document.getElementById("greet").innerHTML=today.toLocaleString()+" "+message;
+                }
+                setInterval(getdateandtime,1000);
+                function check(){
+                    var guessnum=parseInt(document.getElementById("num").value);
+                        if(guessnum==chosennum){
+                            document.getElementById("res").innerHTML="You have guessed the number correctly! Great job!";
+                        }
+                        else{
+                            if(guessnum<chosennum){
+                                document.getElementById("res").innerHTML="You have guessed a number too low. Try a higher number!";
+                                gameon=true;
+                            }
+                            if(guessnum>chosennum){
+                                document.getElementById("res").innerHTML="You have guessed a number too high. Try a lower number!";
+                                gameon=true;
+                            }
+                        }
+                    }
+                function reload(){
+                    window.location.reload(true); 
+                }
+                function mul(){
+                    var num=parseInt(document.getElementById("mul").value);
+                    var result=0
+                    document.getElementById("table").innerHTML="";
+                    for(var i=1;i<=15;i++){
+                        result=num*i;
+                        document.getElementById("table").innerHTML+=result+", ";
+                    }
+                }
+                function prime(){
+                    var num=parseInt(document.getElementById("prime").value);
+                    for(var i=2;i<=num-1;i++){
+                        if(num%i==0){
+                            document.getElementById("primep").innerHTML="No";
+                            break;
+                        }
+                    }
+                    if(i==num){
+                        document.getElementById("primep").innerHTML="Yes";
+                    }
+                }
+                function names(){
+                    var name=document.getElementById("name").value;
+                    if(chosenname==name){
+                        document.getElementById("namep").innerHTML="You have guessed correctly! Nice job!";
+                    }
+                    else{
+                        document.getElementById("namep").innerHTML="You have guessed incorrectly! Try again!";
+                    }
+                }
+            </script>
+    </body>
+</html>

@@ -10,20 +10,21 @@
     <body>
         <div id="banner"></div>
         <header>
-            <img src="Me.PNG" id="logo">
+            <img onmouseover="imgchange()" onmouseout="imgsame()" src="Me.PNG" id="logo">
             <h1 id="mainheading">Advik's Portfolio</h1>
         </header>
         <nav>
-            <a href="index.html" style="color: black;">Home</a>
-            <a href="sunilmeet.html" style="color: black;">Sunil Gavaskar</a>
-            <a href="mypl.html" style="color: black;">My Gallery</a>
+            <a onmouseover="barchange()" onmouseout="barsame()" href="index.html" style="color: black; " id="home">Home</a>
+            <a onmouseover="gavachange()" onmouseout="gavasame()" href="sunilmeet.html" style="color: black;" id="gava">Sunil Gavaskar</a>
+            <a onmouseover="galchange()" onmouseout="galsame()" href="mypl.html" style="color: black;" id="gal">My Gallery</a>
+            <a onmouseover="prochange()" onmouseout="prosame()" href="My_pro.html" style="color: black;" id="pro">Mini Projects</a>
         </nav>
         <h1>Feedback Form</h1>
         <form name="Form" id="Form" action="mailto: advikamitsharma@gmail.com" method="POST" enctype="text/plain">
             <hr>
             <br>
             <label for="F-name">First Name:</label>
-            <input type="text" id="F-name" name="F-name">
+            <input type="text" id="F-name" name="F-name" onkeypress="colchange()" onkeyup="colsame()">
             <br>
             <br>
             <label for="L-name">Last Name:</label>
@@ -69,5 +70,54 @@
             <br>
             <input type="submit" name="submit" id="submit" value="Finish" onclick="alert('Thank you for submitting the form. BYE!')">
         </form>
+        <script>
+            function imgchange(){
+                logo.style.width="20%";
+                logo.style.borderRadius="30% 60%";
+            }
+            function imgsame(){
+                logo.style.transition="1.5s"
+                logo.style.width="15%";
+                logo.style.borderRadius="20% 50%";
+            }
+            function barchange(){
+                home.style.fontSize="50px";
+                home.style.color="magenta";
+            }
+            function barsame(){
+                home.style.fontSize="40px";
+                home.style.color="black";
+            }
+            function gavachange(){
+                gava.style.fontSize="50px";
+                gava.style.color="magenta";
+            }
+            function gavasame(){
+                gava.style.fontSize="40px";
+                gava.style.color="black";
+            }
+            function galchange(){
+                gal.style.fontSize="50px";
+                gal.style.color="magenta";
+            }
+            function galsame(){
+                gal.style.fontSize="40px";
+                gal.style.color="black";
+            }
+            function prochange(){
+                pro.style.fontSize="50px";
+                pro.style.color="magenta";
+            }
+            function prosame(){
+                pro.style.fontSize="40px";
+                pro.style.color="black";
+            }
+            function colchange(){
+                document.getElementById("F-name").style.backgroundColor="Pink";
+            }
+            function colsame(){
+                document.getElementById("F-name").style.backgroundColor="White";
+            }
+        </script>
     </body>
 </html>

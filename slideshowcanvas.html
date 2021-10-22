@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML5 Canvas Slideshow | Script Tutorials</title>
+        <style>
+            /* page layout styles */
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color:#eee;
+    color:#fff;
+    font:14px/1.3 Arial,sans-serif;
+}
+header {
+    background-color:#212121;
+    box-shadow: 0 -1px 2px #111111;
+    display:block;
+    height:70px;
+    position:relative;
+    width:100%;
+    z-index:100;
+}
+header h2{
+    font-size:22px;
+    font-weight:normal;
+    left:50%;
+    margin-left:-400px;
+    padding:22px 0;
+    position:absolute;
+    width:540px;
+}
+header a.stuts,a.stuts:visited{
+    border:none;
+    text-decoration:none;
+    color:#fcfcfc;
+    font-size:14px;
+    left:50%;
+    line-height:31px;
+    margin:23px 0 0 110px;
+    position:absolute;
+    top:0;
+}
+header .stuts span {
+    font-size:22px;
+    font-weight:bold;
+    margin-left:5px;
+}
+.container {
+    color: #000;
+    margin: 20px auto;
+    position: relative;
+    width: 900px;
+}
+#slideshow {
+    border:1px #000 solid;
+    box-shadow:4px 6px 6px #444444;
+    display:block;
+    margin:0 auto;
+    height:300px;
+    width:900px;
+}
+.container .slides {
+    display:none;
+}
+        </style>
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/pixastic.custom.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <h2>HTML5 Canvas Slideshow</h2>
+            <a href="http://www.script-tutorials.com/html5-canvas-slideshow/" class="stuts">Back to original tutorial on <span>Script Tutorials</span></a>
+        </header>
+        <div class="container">
+            <div class="slides">
+                <img src="lenovo_90jf001mus_t730_i7_8700k_16gb_1tb_1432590.jpg">
+                <img src="sunil-gavaskar-1200.jpg" />
+            <canvas id="slideshow" width="900" height="300"></canvas>
+        </div>
+        <script>
+            var canvas, ctx;
+var aImages = [];
+var iCurSlide = 0;
+var iCnt = 0;
+var iSmTimer = 0;
+var iContr = 0;
+var iEfIter = 50;
+
+$(function(){
+    // creating canvas objects
+    canvas = document.getElementById('slideshow');
+    ctx = canvas.getContext('2d');
+
+    // collect all images
+    $('.slides').children().each(function(i){
+        var oImg = new Image();
+        oImg.src = this.src;
+        aImages.push(oImg);
+    });
+
+    // draw first image
+    ctx.drawImage(aImages[iCurSlide], 0, 0);
+
+    var iTimer = setInterval(changeSlideTimer, 5000); // set inner timer
+});
+
+function changeSlideTimer() {
+    iCurSlide++;
+    if (iCurSlide == $(aImages).length) {
+        iCurSlide = 0;
+    }
+
+    clearInterval(iSmTimer);
+    iSmTimer = setInterval(drawSwEffect, 40); // extra one timer
+}
+
+// draw switching effect
+function drawSwEffect() {
+    iCnt++;
+
+    if (iCnt <= iEfIter / 2) {
+        iContr += 0.004;
+
+        // change brightness and contrast
+        Pixastic.process(canvas, 'brightness',
+            {
+                'brightness': 2,
+                'contrast': 0.0 + iContr,
+                'leaveDOM': true
+            },
+            function(img) {
+                ctx.drawImage(img, 0, 0);
+            }
+        );
+    }
+
+    if (iCnt > iEfIter / 2) {
+        // change brightness
+        Pixastic.process(canvas, 'brightness',
+            {
+                'brightness': -2,
+                'contrast': 0,
+                'leaveDOM': true
+            },
+            function(img) {
+                ctx.drawImage(img, 0, 0);
+            }
+        );
+    }
+
+    if (iCnt == iEfIter / 2) { // switch actual image
+        iContr = 0;
+        ctx.drawImage(aImages[iCurSlide], 0, 0);
+
+        Pixastic.process(canvas, 'brightness',
+            {
+                'brightness': iEfIter,
+                'contrast': 0,
+                'leaveDOM': true
+            },
+            function(img) {
+                ctx.drawImage(img, 0, 0);
+            }
+        );
+    } else if (iCnt == iEfIter) { // end of cycle, clear extra sub timer
+        clearInterval(iSmTimer);
+        iCnt = 0;
+        iContr = 0;
+    }
+}
+        </script>
+    </body>
+</html>

@@ -13,15 +13,23 @@
             <h1 id="mainheading">Advik's Portfolio</h1>
         </header>
         <nav>
-            <a href="index.html" style="color: black;">Home</a>
-            <a href="sunilmeet.html" style="color: black;">Sunil Gavaskar</a>
-            <a href="mypl.html" style="color: black;">My Gallery</a>
+            <a onmouseover="barchange()" onmouseout="barsame()" href="index.html" style="color: black; " id="home">Home</a>
+            <a onmouseover="gavachange()" onmouseout="gavasame()" href="sunilmeet.html" style="color: black;" id="gava">Sunil Gavaskar</a>
+            <a onmouseover="galchange()" onmouseout="galsame()" href="mypl.html" style="color: black;" id="gal">My Gallery</a>
+            <a onmouseover="prochange()" onmouseout="prosame()" href="My_pro.html" style="color: black;" id="pro">Mini Projects</a>
         </nav>
         <div class="header_section">
             <h1 style="float: center;">Explore My Gallery-My Life, My World</h1>
         <hr>
         <br>
-        <img src="gallery.gif" id="gif">
+        <Canvas id="canvas">
+            <div class="slides">
+                <img src="DSC_0106.JPG">
+                <img src="DSC_0110.JPG">
+                <img src="lenovo_90jf001mus_t730_i7_8700k_16gb_1tb_1432590.jpg">
+                <img src="23D1062E-0292-4D58-8334-2617840C0566_1_201_a.jpeg">
+            </div>
+        </Canvas>
     </div>
         <br>
         <p style="font-style: bold;">My Pictogram. .</p>
@@ -102,9 +110,61 @@
                 logo.style.borderRadius="30% 60%";
             }
             function imgsame(){
+                logo.style.transition="1.5s"
                 logo.style.width="15%";
                 logo.style.borderRadius="20% 50%";
             }
+            function barchange(){
+                home.style.fontSize="50px";
+                home.style.color="magenta";
+            }
+            function barsame(){
+                home.style.fontSize="40px";
+                home.style.color="black";
+            }
+            function gavachange(){
+                gava.style.fontSize="50px";
+                gava.style.color="magenta";
+            }
+            function gavasame(){
+                gava.style.fontSize="40px";
+                gava.style.color="black";
+            }
+            function galchange(){
+                gal.style.fontSize="50px";
+                gal.style.color="magenta";
+            }
+            function galsame(){
+                gal.style.fontSize="40px";
+                gal.style.color="black";
+            }
+            function prochange(){
+                pro.style.fontSize="50px";
+                pro.style.color="magenta";
+            }
+            function prosame(){
+                pro.style.fontSize="40px";
+                pro.style.color="black";
+            }
+            var mycanvas=document.getElementById("canvas");
+            var img=new Image();
+            var c=mycanvas.getContext("2d");
+            var dx=0,dy=mycanvas.height;
+            mycanvas.width=window.innerWidth/1.4;
+            mycanvas.height=window.innerHeight/2;
+            c.fillStyle="red";
+            c.font="40px 'Broadway'";
+            c.strokeStyle="Blue";
+            c.font="40px 'Copper Black'";
+            img.src="balloons.png";
+            function animate(){
+                c.clearRect(0,0,mycanvas.width,mycanvas.height)
+                c.fillText("Rally Rally on 2 on 2, Rally Rally on 2 Hu!",dx,50);
+                c.fillRect(0,250,dx,200)
+                c.strokeRect(0,0,dx,50)
+                
+            }
+            setInterval(animate,100)
         </script>
     </body>
 </html>
