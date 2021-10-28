@@ -63,7 +63,10 @@ button{
 }
 canvas{
     background-color: rgba(210, 132, 30, 0.507);
-    margin: auto;
+    margin-right: 200px;
+    margin-left: 200px;
+    border-radius: 20%;
+    border: crimson 5px double;
     
 }
 #logo{
@@ -146,7 +149,7 @@ canvas{
 }
 .slides{
     width: 40%;
-    height: fit-content;
+    height: 50vh;
     overflow: hidden;
     margin: auto;
     display: block;

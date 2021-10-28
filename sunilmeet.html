@@ -35,8 +35,16 @@
                 alert("I am redirecting the page!");
                 window.location="https://en.wikipedia.org/wiki/Sunil_Gavaskar";
             }
+            var number=0
             function picchange(){
-                sgmeet.src="Sunil-Gavaskar.jpg";
+                if(number==0){
+                document.getElementById("sgmeet").src="Sunil-Gavaskar.jpg";
+                number=1
+                }
+                else{
+                    document.getElementById("sgmeet").src="sunil-gavaskar-1200.jpg";
+                    number=0
+                }
             }
             function imgchange(){
                 logo.style.width="20%";

@@ -18,19 +18,15 @@
             <a onmouseover="galchange()" onmouseout="galsame()" href="mypl.html" style="color: black;" id="gal">My Gallery</a>
             <a onmouseover="prochange()" onmouseout="prosame()" href="My_pro.html" style="color: black;" id="pro">Mini Projects</a>
         </nav>
-        <div class="header_section">
             <h1 style="float: center;">Explore My Gallery-My Life, My World</h1>
         <hr>
         <br>
-        <Canvas id="canvas">
-            <div class="slides">
-                <img src="DSC_0106.JPG">
-                <img src="DSC_0110.JPG">
-                <img src="lenovo_90jf001mus_t730_i7_8700k_16gb_1tb_1432590.jpg">
-                <img src="23D1062E-0292-4D58-8334-2617840C0566_1_201_a.jpeg">
-            </div>
-        </Canvas>
-    </div>
+        <div class="slides">
+            <img src="DSC_0106.JPG">
+            <img src="DSC_0110.JPG">
+            <img src="lenovo_90jf001mus_t730_i7_8700k_16gb_1tb_1432590.jpg">
+            <img src="23D1062E-0292-4D58-8334-2617840C0566_1_201_a.jpeg">
+        </div>
         <br>
         <p style="font-style: bold;">My Pictogram. .</p>
         <br>
@@ -157,13 +153,6 @@
             c.strokeStyle="Blue";
             c.font="40px 'Copper Black'";
             img.src="balloons.png";
-            function animate(){
-                c.clearRect(0,0,mycanvas.width,mycanvas.height)
-                c.fillText("Rally Rally on 2 on 2, Rally Rally on 2 Hu!",dx,50);
-                c.fillRect(0,250,dx,200)
-                c.strokeRect(0,0,dx,50)
-                
-            }
             setInterval(animate,100)
         </script>
     </body>
